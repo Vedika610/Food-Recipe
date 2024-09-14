@@ -1,0 +1,107 @@
+/* Basic styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: none;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px; /* Increased max width for a wider container */
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#ingredients {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #218838;
+}
+
+#recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid with 4 items per row */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center grid items horizontally */
+    padding: 20px 0; /* Add some padding around the container */
+}
+
+.recipe {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    width: 100%; /* Make the item take full width of the grid column */
+    max-width: 250px; /* Set a max width to avoid overly wide cards */
+}
+
+.recipe img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.recipe h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.recipe p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Video background styling */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensure the video covers the screen properly */
+    filter: blur(10px); /* Blurs the video */
+    opacity: 20; /* Optional: make it semi-transparent */
+}
